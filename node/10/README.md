@@ -3,5 +3,9 @@
 Install:
 
 - npm@6
-- pnpm
 - yarn
+
+Used by:
+
+- chrome-extension
+- veelo-native
