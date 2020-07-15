@@ -9,6 +9,7 @@ RUN apt-get update && apt-get install --no-install-recommends -y \
   pdftk \
   postgresql-client \
   python-dev \
+  tree \
   && apt-get clean \
   && rm -rf /var/lib/apt/lists/*
 RUN pip install --no-cache-dir -U \
@@ -17,6 +18,3 @@ RUN pip install --no-cache-dir -U \
   setuptools \
   virtualenv \
   wheel
-RUN virtualenv -p $(which python2) ${HOME}/.venv/python2
-RUN /bin/bash -c "source ${HOME}/.venv/python2/bin/activate; \
-  pip install --no-cache-dir -U pip-tools"
